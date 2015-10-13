@@ -89,7 +89,7 @@ Cat.prototype = Mammal.prototype;
 var happy_dog = new Dog(true);
 var mad_cat = new Cat(false);
 
-// Hows that helpful? Why not just instantiate Animals directly?
+// How is that helpful? Why not just instantiate Animals directly?
 // happy_dog = new Animal("bark", true);
 // mad_cat = new Animal("meow", false);
 
@@ -109,4 +109,4 @@ Cat.prototype.update = function() {
 In essence, a Prototype allow us to define methods (think update()) for instances created by a certain constructor (think Mammal()). It's very similar to a Class definition in Ruby.
 
 # Closing
-ES5 doesn't natively support classes or the behaviors associated with them. Prototypes give us the ability to mimmic that without too much trouble. When writing object oriented ES5 JavaScript, I'd advise using a library to make things easier, like `util.inherits` in node or [Fiber](https://github.com/linkedin/Fiber) in the browser.
+ES5 doesn't natively support classes or the behaviors associated with them. Prototypes give us the ability to mimmic that without too much trouble. Still, when writing object oriented ES5 JavaScript, I'd advise using a library to make things easier, like `util.inherits` in node or [Fiber](https://github.com/linkedin/Fiber) in the browser.
