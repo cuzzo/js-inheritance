@@ -1,5 +1,17 @@
 #! /usr/bin/env node
 
+/**
+ * NASA needs your help!
+ *
+ * The Projectile constructor and some of its methods have mysteriously
+ * vanished from the codebase. The deadline for the software is in...
+ * 5 minutes!
+ *
+ * Please hurry and read the commented documentation below and implement
+ * the Projectile constructor and its travel method in time.
+ * The fate of the Mars mission depends on it!
+ */
+
 var assert = require("assert");
 
 /**
@@ -11,21 +23,12 @@ var assert = require("assert");
  * @_speed -> float -> how quickly the projectile travels.
  * @_distance -> float -> how far the projectile has traveled.
  */
-function Projectile(type, speed) {
-  this._distance = 0;
-  this._type = type;
-  this._speed = speed;
-}
-
 
 /**
  * Define Projectile::travel here.
  *
  * It takes one argument: time.
  */
-Projectile.prototype.travel = function(time) {
-  this._distance += time * this._speed;
-};
 
 Projectile.prototype.get_distance_traveled = function() {
   return this._distance;

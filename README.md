@@ -32,11 +32,11 @@ class Mammal
 end
 ```
 
-But with the JavaScript above, we don't yet have any way to enforce that all our mammal instances will have a "sound" member. A "constructor" function that programmatically creates mammals can fix that.
+But with the JavaScript above, we don't yet have any way to enforce that all our mammal instances will have a `sound` member. A "constructor" function that programmatically creates mammals can fix that.
 
 # What's a constructor?
 * A constructor is a special type of function that creates an instance of a Class.
-* In ruby, "initialize" is very similar to a constructor.
+* In ruby, `initialize` is very similar to a constructor.
 * In JavaScript, a constructor might look something like:
 
 ```javascript
@@ -48,10 +48,10 @@ function construct_mammal(sound) {
 var cat = construct_mammal("meow");
 ```
 
-# "new" magic
-* In Ruby, you define the "initialize" method, but you call it with: Mammal.new().
-* Fortunately, JavaScript also has a "new" keyword.
-* With the "new" keyword, in JavaScript, every function can behave as a constructor.
+# `new` magic
+* In Ruby, you define the "initialize" method, but you call it with: `Mammal.new()`.
+* Fortunately, JavaScript also has a `new` keyword.
+* With the `new` keyword, in JavaScript, every function can behave as a constructor.
 * But these functions are typically written with a special style.
 
 ```javascript
@@ -89,7 +89,7 @@ Cat.prototype = Mammal.prototype;
 var happy_dog = new Dog(true);
 var mad_cat = new Cat(false);
 
-// Hows that helpful? Why not just instantiate Animals directly?
+// How is that helpful? Why not just instantiate Animals directly?
 // happy_dog = new Animal("bark", true);
 // mad_cat = new Animal("meow", false);
 
@@ -106,7 +106,7 @@ Cat.prototype.update = function() {
 };
 ```
 
-In essence, a Prototype allow us to define methods (think update()) for instances created by a certain constructor (think Mammal()). It's very similar to a Class definition in Ruby.
+In essence, a Prototype allow us to define methods (think `update()`) for instances created by a certain constructor (think `Mammal()`). It's very similar to a Class definition in Ruby.
 
 # Closing
-ES5 doesn't natively support classes or the behaviors associated with them. Prototypes give us the ability to mimmic that without too much trouble. When writing object oriented ES5 JavaScript, I'd advise using a library to make things easier, like `util.inherits` in node or [Fiber](https://github.com/linkedin/Fiber) in the browser.
+ES5 doesn't natively support classes or the behaviors associated with them. Prototypes give us the ability to mimmic that without too much trouble. Still, when writing object oriented ES5 JavaScript, I'd advise using a library to make things easier, like `util.inherits` in node or [Fiber](https://github.com/linkedin/Fiber) in the browser.
