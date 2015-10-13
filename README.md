@@ -63,7 +63,7 @@ var cat = new Mammal("meow");
 
 The above is roughly equivalent to the `construct_mammal` example.
 
-# Inheritence
+# Inheritance
 
 ```javascript
 function Mammal(sound, is_happy) {
